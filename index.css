@@ -16,6 +16,7 @@ body{
     margin: 0;
     background: url(images/background2.png);
     background-size: auto;
+    max-height: none;
 }
 
 /*Initial screen layout*/
@@ -184,7 +185,7 @@ input{
     margin-top: 30px;
     margin-bottom: 50px;
     width: 70%;
-    min-width: 280px;
+    min-width: 300px;
     text-align: center;
     font-size: 15px;
 }
