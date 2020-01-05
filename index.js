@@ -6,24 +6,34 @@ const getDeviceURL = 'https://fonoapi.freshpixl.com/v1/getdevice';
 const newDeviceURL= 'https://fonoapi.freshpixl.com/v1/getlatest';
 const youtubeURL = 'https://www.googleapis.com/youtube/v3/search';
 
-//Exist out of the initial screen
-function existInitialScreen(){
-    $(".phone-image").click(function(){
-        $('.initial-nav-bar').toggle();
-        phoneEffect();
-        setTimeout(function(){
-          $(".initial-screen").css("display","none");  
-          $(".search-bar-screen").css("display","block");
-          $("body").css("background","url(images/background2.jpg)");
-         }, 2000);
-    });
+//Checks what part of the screen was clicked
+function CheckWhereWasClicked(){
+  let phone = true;
+  $(document).click(function(event){
+    if($(event.target).attr("class").includes("phone-image")){
+      phone = true;
+    }
+    else{ phone = false; }
+    existInitialScreen(phone);
+    manageWrongClicks(phone);
+  });
 }
 
-//Render phone effect
-let phone = true;
-function phoneEffect(){
-  phone = false;
+//Exist out of the initial screen
+function existInitialScreen(phoneClicked=false){
+   if(phoneClicked === true){
+    $('.initial-nav-bar').toggle();
+    phoneEffect();
+    setTimeout(function(){
+      $(".initial-screen").css("display","none");  
+      $(".search-bar-screen").css("display","block");
+      $("body").css("background","url(images/background2.jpg)");
+     }, 2000);
+  }
+}
 
+//Render phone image effect
+function phoneEffect(){
   $(".text").animate({
     width: "150px",
     height: 0
@@ -46,10 +56,9 @@ function phoneEffect(){
   }, 1400);
 }
 
-//Vibrate the phone when the user clicks on anything other than the phone image
-function wrongClick(){
-    $(document).click(function(event){
-        if(phone === true){  
+//Vibrate the phone image when the user clicks on anything other than the phone image
+function manageWrongClicks(phone=true){
+        if(phone === false){  
           $( ".red" ).css("display", "block");
           for(let i = 0; i < 3; i++){
             $(".image-container").animate({
@@ -66,7 +75,6 @@ function wrongClick(){
             $(".red").fadeOut(700); 
           }
         }
-    });
 }
 
 //This function return youtube links or prints that Youtubr apikey has exceeded its qouta limit in the review video element in html
@@ -83,8 +91,6 @@ function addVideos(deviceName, videoNum){
 
     const queryString = formatQueryParams(params)
     const url = searchURL + '?' + queryString;
-      
-    console.log(url);
     
     fetch(url)
       .then(response => {
@@ -304,8 +310,8 @@ function runAllfunctions(){
     getInput();
     collapsableSpecs();
     collapsableReviews();
-    wrongClick();
     seeSpecs();
+    CheckWhereWasClicked();
 }
 
 $(runAllfunctions);
