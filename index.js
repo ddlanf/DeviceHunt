@@ -10,7 +10,7 @@ const youtubeURL = 'https://www.googleapis.com/youtube/v3/search';
 function CheckWhereWasClicked(){
   let phone = true;
   $(document).click(function(event){
-    if($(event.target).attr("class").includes("phone-image")){
+    if($(event.target).attr('class').includes('phone-image')){
       phone = true;
     }
     else{ phone = false; }
@@ -25,33 +25,33 @@ function existInitialScreen(phoneClicked=false){
     $('.initial-nav-bar').toggle();
     phoneEffect();
     setTimeout(function(){
-      $(".initial-screen").css("display","none");  
-      $(".search-bar-screen").css("display","block");
-      $("body").css("background","url(images/background2.jpg)");
+      $('.initial-screen').css('display','none');  
+      $('.search-bar-screen').css('display','block');
+      $('body').css('background','url(images/background2.png)');
      }, 2000);
   }
 }
 
 //Render phone image effect
 function phoneEffect(){
-  $(".text").animate({
-    width: "150px",
+  $('.text').animate({
+    width: '150px',
     height: 0
   }, 200, function(){
 
-    if($(window).width() < 600){$(".initial-one").animate({
+    if($(window).width() < 600){$('.initial-one').animate({
       height: '250px'
     }, 300); }
-    else{$(".initial-two").animate({
+    else{$('.initial-two').animate({
       height: '250px'
     }, 300); }
   });
 
   setTimeout(function(){
-  $( ".phone-image" ).css("animation", "none");
-  if($(window).width() < 600){ $( ".phone-image" ).css("transform", "rotate(360deg) scale(3.5, 3.5)");}
-  else if($(window).width() > 600 && $(window).width() < 1000 ){$( ".phone-image" ).css("transform", "rotate(270deg) scale(6, 6)"); } 
-  else{ $( ".phone-image" ).css("transform", "rotate(270deg) scale(6.5, 6.5)");  }
+  $( '.phone-image' ).css('animation', 'none');
+  if($(window).width() < 600){ $( '.phone-image' ).css('transform', 'rotate(360deg) scale(3.5, 3.5)');}
+  else if($(window).width() > 600 && $(window).width() < 1000 ){$( '.phone-image' ).css('transform', 'rotate(270deg) scale(6, 6)'); } 
+  else{ $( '.phone-image' ).css('transform', 'rotate(270deg) scale(6.5, 6.5)');  }
   $('.phone-background').toggle();
   }, 1400);
 }
@@ -59,20 +59,20 @@ function phoneEffect(){
 //Vibrate the phone image when the user clicks on anything other than the phone image
 function manageWrongClicks(phone=true){
         if(phone === false){  
-          $( ".red" ).css("display", "block");
+          $( '.red' ).css('display', 'block');
           for(let i = 0; i < 3; i++){
-            $(".image-container").animate({
-              "right": "10px"
+            $('.image-container').animate({
+              'right': '10px'
             }, 5).animate({
-              "right": "0px"
+              'right': '0px'
             }, 5);
-            $(".image-container").animate({
-              "padding-left": "10px"
+            $('.image-container').animate({
+              'padding-left': '10px'
             }, 5).animate({
-              "padding-left": "0px"
+              'padding-left': '0px'
             }, 5, function() {
             });
-            $(".red").fadeOut(700); 
+            $('.red').fadeOut(700); 
           }
         }
 }
@@ -86,7 +86,7 @@ function addVideos(deviceName, videoNum){
         part: 'snippet',
         maxResults: 10,
         order: 'relevance',
-        q: deviceName + ' ' + "review"
+        q: deviceName + ' ' + 'review'
     };
 
     const queryString = formatQueryParams(params)
@@ -106,11 +106,11 @@ function addVideos(deviceName, videoNum){
       });
 }
 
-//Adds videos to "search-result"
+//Adds videos to 'search-result'
 function appendVideos(responseJson, reviewNum){
   for(let i = 0; i < 5; i++){
     $('.search-results').children(`.review-${reviewNum}`).append(`
-         <iframe class="video" src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}"></iframe>
+         <iframe class='video' src='https://www.youtube.com/embed/${responseJson.items[i].id.videoId}'></iframe>
     `);
   }
 }
@@ -118,25 +118,25 @@ function appendVideos(responseJson, reviewNum){
 //Displays results on the screen
 function displayResults(responseJson, maxResults){
     if(!maxResults){ maxResults = 5; }
-    $(".some-image").css("display","none");
-    $(".search-result-screen").css("display","block");
+    $('.some-image').css('display','none');
+    $('.search-result-screen').css('display','block');
     $('.search-results').empty();
     for (let i = 0; i < responseJson.length && i < maxResults; i++){
          $('.search-results').append(`
-             <button class="results">
+             <button class='results'>
               ${responseJson[i].DeviceName}
-                <div class="click-to-see-specs">
-                  <span class="see-specs">Click to see specs</span>
-                  <span class="close-specs">Close specs</span>
+                <div class='click-to-see-specs'>
+                  <span class='see-specs'>Click to see specs</span>
+                  <span class='close-specs'>Close specs</span>
                 <div>
               </button>  
-              <ul class="result-specs spec-${i} hidden"> 
+              <ul class='result-specs spec-${i} hidden'> 
               </ul>
-              <button class="show-reviews hidden">
-                <span class="see-videos">Click Here To Watch Reviews</span>
-                <span class="close-videos">Close Reviews</span>
+              <button class='show-reviews hidden'>
+                <span class='see-videos'>Click Here To Watch Reviews</span>
+                <span class='close-videos'>Close Reviews</span>
               </button>
-              <div class="review-videos review-${i} hidden">
+              <div class='review-videos review-${i} hidden'>
               </div>`
             );           
             
@@ -144,8 +144,8 @@ function displayResults(responseJson, maxResults){
               $('.search-results').children(`.spec-${i}`).append(`
               <table>
               <tr>
-                <td class="specs">${changeLetterCase(key)}:</td>
-                <td class="details">${responseJson[i][key]}</td>
+                <td class='specs'>${changeLetterCase(key)}:</td>
+                <td class='details'>${responseJson[i][key]}</td>
               <tr>
               </table>
               `);
@@ -155,7 +155,7 @@ function displayResults(responseJson, maxResults){
     }
     if(responseJson.status === 'error'){ 
       $('.search-results').append(`
-      <p class="no-result-found">${responseJson.message}</p>
+      <p class='no-result-found'>${responseJson.message}</p>
       `);
     }
 }
@@ -163,33 +163,33 @@ function displayResults(responseJson, maxResults){
 //This functions converts all Json strings to a more readable format
 function changeLetterCase(letters){
    const shouldBeCapital = ['sim', 'wlan', 'os', 'gps', 'usb', 'cpu', 'nfc', 'sar', 'gpu', 'gprs', 'us', 'eu'];
-   while(letters.includes(" ")){letters = letters.replace(" ", "")};
-   if(letters.startsWith("_")){ letters = letters.slice(1, letters.length); }
-   if(letters.endsWith("_")){ letters = letters.slice(0, letters.length - 1); }
+   while(letters.includes(' ')){letters = letters.replace(' ', '')};
+   if(letters.startsWith('_')){ letters = letters.slice(1, letters.length); }
+   if(letters.endsWith('_')){ letters = letters.slice(0, letters.length - 1); }
    letters = letters.charAt(0).toUpperCase() + letters.substr(1, letters.length);
-   while(letters.includes("_")){ letters = letters.replace("_", " ") };
-   letters = letters.replace(" c", "");
-   let seperatorBySpace = letters.split(" ");
+   while(letters.includes('_')){ letters = letters.replace('_', ' ') };
+   letters = letters.replace(' c', '');
+   let seperatorBySpace = letters.split(' ');
    for(let i = 0; i < seperatorBySpace.length; i++){ 
         for(let j = 0; j < shouldBeCapital.length; j++){
           if(shouldBeCapital[j] === seperatorBySpace[i].toLowerCase()){ seperatorBySpace[i] = seperatorBySpace[i].toUpperCase(); }
         }
    }
-   letters = seperatorBySpace.join(" ");
-   if( letters.search("g") === 1 && !Number.isNaN(letters[letters.search("g") - 1])){
+   letters = seperatorBySpace.join(' ');
+   if( letters.search('g') === 1 && !Number.isNaN(letters[letters.search('g') - 1])){
     letters = letters.charAt(0) + letters.charAt(1).toUpperCase() + letters.substr(2, letters.length);
    }
-   if(!Number.isNaN(Number(letters[letters.search(" ") - 1])) && !Number.isNaN(Number(letters[letters.search(" ") + 1]))){
-    letters = letters.replace(" ", ".");
+   if(!Number.isNaN(Number(letters[letters.search(' ') - 1])) && !Number.isNaN(Number(letters[letters.search(' ') + 1]))){
+    letters = letters.replace(' ', '.');
    }
-   if(letters.indexOf(" ") > 0 && Number.isNaN(Number(letters[letters.search(" ") + 1]))){
-    letters = letters.substr(0, letters.search(" ")) + " " + letters.charAt(letters.indexOf(" ") + 1).toUpperCase() + letters.substr(letters.indexOf(" ") + 2, letters.length);
+   if(letters.indexOf(' ') > 0 && Number.isNaN(Number(letters[letters.search(' ') + 1]))){
+    letters = letters.substr(0, letters.search(' ')) + ' ' + letters.charAt(letters.indexOf(' ') + 1).toUpperCase() + letters.substr(letters.indexOf(' ') + 2, letters.length);
    }
 
    const joinWithSpace = [];
    let letterSeperator = 0;
    for(let i = 1; i < letters.length; i++){
-        if(letters[i] === letters[i].toUpperCase() && !letters.includes(" ") && !(letters.toUpperCase() === letters)){
+        if(letters[i] === letters[i].toUpperCase() && !letters.includes(' ') && !(letters.toUpperCase() === letters)){
             joinWithSpace.push(letters.substr(letterSeperator, i));
             letterSeperator = letters.indexOf(letters[i]);
         }   
@@ -251,14 +251,14 @@ function findDevice(brand, device, model, maxResults=5){
 
 //Retrieves user inputs
 function getInput(){
-    $("form").submit(function(){
+    $('form').submit(function(){
         event.preventDefault();
         const brand = $('#brand').val();
         const device = $('#device').val();
         const model = $('#model').val();
         const maxResults = $('#maxResults').val();
 
-       // alert(brand + ' ' + device + ' ' + model + " " + maxResults);
+       // alert(brand + ' ' + device + ' ' + model + ' ' + maxResults);
          findDevice(brand, device, model, maxResults);
     });
 }
@@ -268,12 +268,12 @@ function getInput(){
 function collapsableSpecs(){
   $('.search-results').on('click', '.results', function(event){
     $(event.target).next().toggle();
-    if($(event.target).nextAll(".review-videos").css('display') == "block"){
-      $(event.target).nextAll(".review-videos").css('display', 'none');
+    if($(event.target).nextAll('.review-videos').css('display') == 'block'){
+      $(event.target).nextAll('.review-videos').css('display', 'none');
     }
     $(event.target).next().next().toggle();
     $(event.target).children('.click-to-see-specs').children('.see-specs').toggle();
-    if($(event.target).children('.click-to-see-specs').children('.see-specs').css('display') == "none"){
+    if($(event.target).children('.click-to-see-specs').children('.see-specs').css('display') == 'none'){
       $(event.target).children('.click-to-see-specs').children('.close-specs').css('display', 'inline');
     }
     else{  $(event.target).children('.click-to-see-specs').children('.close-specs').css('display', 'none'); }
@@ -285,14 +285,14 @@ function collapsableReviews(){
   $('.search-results').on('click', '.show-reviews', function(event){
     $(event.target).next().toggle();
     $(event.target).children('.see-videos').toggle();
-    if($(event.target).children('.see-videos').css("display") == "none" && $(event.target).next().css("display") == "block"){
-        $(event.target).children('.close-videos').css("display", "inline");
+    if($(event.target).children('.see-videos').css('display') == 'none' && $(event.target).next().css('display') == 'block'){
+        $(event.target).children('.close-videos').css('display', 'inline');
     }
     else{ $(event.target).children('.close-videos').css('display', 'none'); }
   });
 }
 
-//Controls the visibility of the text in the "see-specs" button
+//Controls the visibility of the text in the 'see-specs' button
 function seeSpecs(){
   $('.search-results').on('mouseenter', '.results', function(){
     $(event.target).children('.click-to-see-specs').css('display', 'inline');
