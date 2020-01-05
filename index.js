@@ -27,7 +27,7 @@ function existInitialScreen(phoneClicked=false){
     setTimeout(function(){
       $('.initial-screen').css('display','none');  
       $('.search-bar-screen').css('display','block');
-      $('body').css('background','url(images/background2.png)');
+      $('#background1').css('display','none');
      }, 2000);
   }
 }
