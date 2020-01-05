@@ -176,13 +176,13 @@ function changeLetterCase(letters){
         }
    }
    letters = seperatorBySpace.join(" ");
-   if( letters.search("g") === 1 && !isNaN(letters[letters.search("g") - 1])){
+   if( letters.search("g") === 1 && !Number.isNaN(letters[letters.search("g") - 1])){
     letters = letters.charAt(0) + letters.charAt(1).toUpperCase() + letters.substr(2, letters.length);
    }
-   if(!isNaN(letters[letters.search(" ") - 1]) && !isNaN(letters[letters.search(" ") + 1]) ){
+   if(!Number.isNaN(Number(letters[letters.search(" ") - 1])) && !Number.isNaN(Number(letters[letters.search(" ") + 1]))){
     letters = letters.replace(" ", ".");
    }
-   if(letters.indexOf(" ") > 0 && isNaN(letters[letters.search(" ") + 1])){
+   if(letters.indexOf(" ") > 0 && Number.isNaN(Number(letters[letters.search(" ") + 1]))){
     letters = letters.substr(0, letters.search(" ")) + " " + letters.charAt(letters.indexOf(" ") + 1).toUpperCase() + letters.substr(letters.indexOf(" ") + 2, letters.length);
    }
 
@@ -313,5 +313,4 @@ function runAllfunctions(){
     seeSpecs();
     CheckWhereWasClicked();
 }
-
 $(runAllfunctions);
