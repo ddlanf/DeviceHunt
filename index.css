@@ -92,7 +92,7 @@ body{
     width: 150px;
 }
 
-.phone-background, .in-case{
+.phone-background{
     background: white;
     width: 135px;
     height: 250px;
@@ -107,6 +107,9 @@ body{
     -o-transition: none;
 }
 
+.for-phone{
+    z-index: 10;
+}
 @keyframes bounce {
     from { transform: translate3d(0, 0, 0);     }
     to   { transform: translate3d(0, 10px, 0); }
