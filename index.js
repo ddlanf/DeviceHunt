@@ -52,6 +52,7 @@ function phoneEffect(){
 
   setTimeout(function(){
   $( '.phone-image' ).css('animation', 'none');
+  $( '.phone-image' ).css('display', 'inline-block');
   if($(window).width() < 600){ 
     $( '.phone-image' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
     $( '.phone-image' ).css('-ms-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
