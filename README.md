@@ -1,6 +1,6 @@
 # **FindMyDevice.com**
 
-Website link: [https://ddlanf.github.io/FindMyDevice.com/](https://ddlanf.github.io/FindMyDevice.com/){:target="_blank" rel="noopener"}
+Website link: [https://ddlanf.github.io/FindMyDevice.com/](https://ddlanf.github.io/FindMyDevice.com/)
 
 ## Images
 ![Screenshot1](/images/Screenshot1.png)
@@ -19,8 +19,8 @@ of results desired.
 * jQuery
 
 ### APIs Used
-*  [Fono API](https://fonoapi.freshpixl.com/){:target="_blank" rel="noopener"}
+*  [Fono API](https://fonoapi.freshpixl.com/)
 
-* [Youtube API](https://developers.google.com/youtube/v3){:target="_blank" rel="noopener"}
+* [Youtube API](https://developers.google.com/youtube/v3)
 
 
