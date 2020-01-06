@@ -19,8 +19,7 @@ of results desired.
 
 ### API Used
 *  Fono API 
-  * Link: [Fono API Link](https://fonoapi.freshpixl.com/) inline link.
-* Youtube API
-  * Link: [Youtube API Link](https://developers.google.com/youtube/v3) inline link.
+  * Link: [Fono API Link](https://fonoapi.freshpixl.com/)
+  * Link: [Youtube API Link](https://developers.google.com/youtube/v3) 
 
 
