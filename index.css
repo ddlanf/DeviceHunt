@@ -54,7 +54,6 @@ body{
     height: 800px;
 }
 
-
 .phone-image{
     text-align: center;
     display: block;
@@ -69,6 +68,7 @@ body{
     animation: bounce 0.7s ease-in;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+    top: 0;
     top: 40%;
     z-index: 3;
 }

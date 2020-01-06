@@ -1,7 +1,7 @@
 'use strict';
 /*Fono API key, this has not usage limit*/
 const fonoApiKey = '6ce1f53f8ae6a2e8dd8b1e02fe8b19813fc5bab4b78e4d69';
-const youtubeAPI = 'AIzaSyBW_Xe4gdEjGvEmCXtObOK_VTNS3E-dYKY';
+const youtubeAPI = '';
 const getDeviceURL = 'https://fonoapi.freshpixl.com/v1/getdevice';
 const newDeviceURL= 'https://fonoapi.freshpixl.com/v1/getlatest';
 const youtubeURL = 'https://www.googleapis.com/youtube/v3/search';
@@ -44,20 +44,25 @@ function phoneEffect(){
     }, 300); }
     else if($(window).width() > 600 && $(window).width() < 1000){$('.initial-two').animate({
       height: '250px'
-    }, 300); }
+    }, 100); }
     else{$('.initial-three').animate({
       height: '250px'
-    }, 300); }
+    }, 100); }
   });
 
   setTimeout(function(){
   $( '.phone-image' ).css('animation', 'none');
   if($(window).width() < 600){ 
-    $( '.phone-image' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.image-surrounder' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.image-surrounder' ).css('-ms-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.image-surrounder' ).css('-webkit-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.image-surrounder' ).css('-moz-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.image-surrounder' ).css('-o-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+   /*$( '.phone-image' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
     $( '.phone-image' ).css('-ms-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
     $( '.phone-image' ).css('-webkit-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
     $( '.phone-image' ).css('-moz-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
-    $( '.phone-image' ).css('-o-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.phone-image' ).css('-o-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');*/
   }
   else if($(window).width() > 600 && $(window).width() < 1000 ){
     $( '.phone-image' ).css('transform', 'rotate360deg) scale(4.2, 4.2) translateY(15px)'); 
