@@ -53,16 +53,11 @@ function phoneEffect(){
   setTimeout(function(){
   $( '.phone-image' ).css('animation', 'none');
   if($(window).width() < 600){ 
-    $( '.image-surrounder' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
-    $( '.image-surrounder' ).css('-ms-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
-    $( '.image-surrounder' ).css('-webkit-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
-    $( '.image-surrounder' ).css('-moz-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
-    $( '.image-surrounder' ).css('-o-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
-   /*$( '.phone-image' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.phone-image' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
     $( '.phone-image' ).css('-ms-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
     $( '.phone-image' ).css('-webkit-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
     $( '.phone-image' ).css('-moz-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
-    $( '.phone-image' ).css('-o-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');*/
+    $( '.phone-image' ).css('-o-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
   }
   else if($(window).width() > 600 && $(window).width() < 1000 ){
     $( '.phone-image' ).css('transform', 'rotate360deg) scale(4.2, 4.2) translateY(15px)'); 
