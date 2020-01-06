@@ -7,7 +7,6 @@
 html{
     scroll-behavior: smooth;
     width: 100%;
-    overflow: hidden;
 }
 
 body{
@@ -62,7 +61,7 @@ body{
     -webkit-transition: 0.6s ease-in-out;
     -moz-transition:  0.6s ease-in-out;
     -o-transition: 0.6s ease-in-out;
-     transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
     animation: bounce 0.7s ease-in;
     animation-direction: alternate;
     animation-iteration-count: infinite;
@@ -314,6 +313,12 @@ td.specs{
 
 .search-result-screen{
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    html{
+        overflow: hidden;
+    }
 }
 
 @media only screen and (min-width: 600px) {
