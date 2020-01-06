@@ -53,15 +53,18 @@ function phoneEffect(){
     $( '.phone-image' ).css('transform', 'rotate(360deg) scale(3.5, 3.5)');
     $( '.phone-image' ).css('-ms-transform', 'rotate(360deg) scale(3.5, 3.5)');
     $( '.phone-image' ).css('-webkit-transform', 'rotate(360deg) scale(3.5, 3.5)');
+    $( '.phone-image' ).css('-moz-transform', 'rotate(360deg) scale(3.5, 3.5)');
   }
   else if($(window).width() > 600 && $(window).width() < 1000 ){
     $( '.phone-image' ).css('transform', 'rotate(270deg) scale(6, 6)'); 
     $( '.phone-image' ).css('-ms-transform', 'rotate(270deg) scale(6, 6)'); 
-    $( '.phone-image' ).css('-webkit-transform', 'rotate(270deg) scale(6, 6)'); 
+    $( '.phone-image' ).css('-webkit-transform', 'rotate(270deg) scale(6, 6)');
+    $( '.phone-image' ).css('-moz-transform', 'rotate(270deg) scale(6, 6)'); 
   } 
   else{ $( '.phone-image' ).css('transform', 'rotate(270deg) scale(6.5, 6.5)');
   $( '.phone-image' ).css('-ms-transform', 'rotate(270deg) scale(6.5, 6.5)');
   $( '.phone-image' ).css('-webkit-transform', 'rotate(270deg) scale(6.5, 6.5)');
+  $( '.phone-image' ).css('-moz-transform', 'rotate(270deg) scale(6.5, 6.5)');
   }
   $('.phone-background').toggle();
   }, 1400);
