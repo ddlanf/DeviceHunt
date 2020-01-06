@@ -47,7 +47,7 @@ function phoneEffect(){
     }, 100); }
     else{$('.initial-three').animate({
       height: '250px'
-    }, 100); }
+    }, 300); }
   });
 
   setTimeout(function(){
