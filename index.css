@@ -16,6 +16,7 @@ body{
     background: url(images/background2.png);
     background-size: auto;
     max-height: none;
+    overflow-x: hidden;
 }
 
 /*Initial screen layout*/
@@ -27,7 +28,9 @@ body{
     min-height: 1200px;
     background: url(images/background.png);
     background-size: auto;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: burlywood;
     z-index: -5;
     top:0;
 }   
@@ -80,7 +83,7 @@ body{
     z-index: 1;
 }
 
-.initial-one, .initial-two{
+.initial-one, .initial-two, .initial-three{
     z-index: -1;
     top: 41%;
     display: relative;
@@ -94,7 +97,7 @@ body{
     height: 250px;
     max-width: 135px;
     max-height: 250px;
-    margin-left: 10px;
+    margin-left: 8px;
     border-radius: 20px;
     z-index: -4;
     transition: none;

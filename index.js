@@ -42,7 +42,10 @@ function phoneEffect(){
     if($(window).width() < 600){$('.initial-one').animate({
       height: '250px'
     }, 300); }
-    else{$('.initial-two').animate({
+    else if($(window).width() > 600 && $(window).width() < 1000){$('.initial-two').animate({
+      height: '250px'
+    }, 300); }
+    else{$('.initial-three').animate({
       height: '250px'
     }, 300); }
   });
@@ -50,16 +53,16 @@ function phoneEffect(){
   setTimeout(function(){
   $( '.phone-image' ).css('animation', 'none');
   if($(window).width() < 600){ 
-    $( '.phone-image' ).css('transform', 'rotate(360deg) scale(3.5, 3.5)');
-    $( '.phone-image' ).css('-ms-transform', 'rotate(360deg) scale(3.5, 3.5)');
-    $( '.phone-image' ).css('-webkit-transform', 'rotate(360deg) scale(3.5, 3.5)');
-    $( '.phone-image' ).css('-moz-transform', 'rotate(360deg) scale(3.5, 3.5)');
+    $( '.phone-image' ).css('transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.phone-image' ).css('-ms-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.phone-image' ).css('-webkit-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
+    $( '.phone-image' ).css('-moz-transform', 'rotate(360deg) scale(2.8, 2.8) translateY(-31px)');
   }
   else if($(window).width() > 600 && $(window).width() < 1000 ){
-    $( '.phone-image' ).css('transform', 'rotate(270deg) scale(6, 6)'); 
-    $( '.phone-image' ).css('-ms-transform', 'rotate(270deg) scale(6, 6)'); 
-    $( '.phone-image' ).css('-webkit-transform', 'rotate(270deg) scale(6, 6)');
-    $( '.phone-image' ).css('-moz-transform', 'rotate(270deg) scale(6, 6)'); 
+    $( '.phone-image' ).css('transform', 'rotate360deg) scale(4.2, 4.2) translateY(15px)'); 
+    $( '.phone-image' ).css('-ms-transform', 'rotate(360deg) scale(4.2, 4.2) translateY(15px)'); 
+    $( '.phone-image' ).css('-webkit-transform', 'rotate(360deg) scale(4.2, 4.2) translateY(15px)');
+    $( '.phone-image' ).css('-moz-transform', 'rotate(360deg) scale(4.2, 4.2) translateY(15px)'); 
   } 
   else{ $( '.phone-image' ).css('transform', 'rotate(270deg) scale(6.5, 6.5)');
   $( '.phone-image' ).css('-ms-transform', 'rotate(270deg) scale(6.5, 6.5)');
