@@ -235,7 +235,7 @@ input{
 .show-reviews{
     width: 100%;
     height: 40px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     background-color:  lightgrey;
 }
@@ -373,6 +373,11 @@ td.specs{
     .search-results{
         margin-top: 20px;
     }
+    .see-specs, .close-specs{
+        left: 10px;
+        top: 10px;
+        font-size: 13px;
+    }
 
 }
 
@@ -423,4 +428,9 @@ td.specs{
         top: 120px;
     }
 
+    .see-specs, .close-specs{
+        left: 10px;
+        top: 5px;
+        font-size: 21px;
+    }
 }
