@@ -6,7 +6,6 @@ Website link: [https://ddlanf.github.io/FindMyDevice.com/](https://ddlanf.github
 ![Screenshot1](/images/Screenshot1.png)
 ![Screenshot2](/images/Screenshot2.png)
 ![Screenshot3](/images/Screenshot3.png)
-![Screenshot4](/images/Screenshot4.png)
 
 ## Core Features
 This apps allows the users to find specs and watch Youtube reviews of the devices they have searched. 
