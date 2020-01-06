@@ -17,9 +17,10 @@ of results desired.
 * Javascript
 * jQuery
 
-### API Used
+### APIs Used
 *  Fono API 
-  * Link: [Fono API Link](https://fonoapi.freshpixl.com/)
-  * Link: [Youtube API Link](https://developers.google.com/youtube/v3) 
+  - Link: [Fono API Link](https://fonoapi.freshpixl.com/)
+* Youtube API
+  - Link: [Youtube API Link](https://developers.google.com/youtube/v3) 
 
 
