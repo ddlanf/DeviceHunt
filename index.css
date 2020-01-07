@@ -75,11 +75,10 @@ body{
 
 .red{
     text-align: center;
-    display: block;
+    display: none;
     width: 150px;
     text-align: center;
     position: absolute;
-    display: none;
     top: 40%;
     z-index: 1;
 }

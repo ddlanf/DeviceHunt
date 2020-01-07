@@ -64,6 +64,7 @@ function phoneEffect(){
   }, 1400);
 }
 
+let t 
 //Vibrate the phone image when the user clicks on anything other than the phone image
 function manageWrongClicks(phone=true){
         if(phone === false){  
@@ -78,10 +79,11 @@ function manageWrongClicks(phone=true){
               'padding-left': '10px'
             }, 5).animate({
               'padding-left': '0px'
-            }, 5, function() {
-            });
-            $('.red').fadeOut(700); 
+            }, 5,
+            );
           }
+         
+          $( '.red' ).fadeOut(700);
         }
 }
 
