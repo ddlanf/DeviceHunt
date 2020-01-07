@@ -136,6 +136,7 @@ h1{
     margin-left: auto;
     display: block;
     padding-top: 15px;
+    font-size: 15px;
 }
 
 .search-bar{
@@ -349,6 +350,7 @@ td.specs{
     h1{
         width: 400px;
         margin-bottom: 0px;
+        font-size: 21px;
     }
 
     .search-bar{
@@ -407,6 +409,7 @@ td.specs{
     h1{
         width: 600px;
         margin-bottom: 0px;
+        font-size: 24px;
     }
     
     .search-bar{
