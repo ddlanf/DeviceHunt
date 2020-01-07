@@ -25,8 +25,6 @@
                 <div class="phone-image phone-background"></div>
                 <img class="phone-image" src="images/phone.png" alt="phone-image"/>
                 <img class="red" src="images/phone-red.png" alt="phone-image"/>
-                <img class="phone-image initial-one" src="images/search-screen.png" alt="phone-image"/>
-                <img class="phone-image initial-two" src="images/search-screen2.png" alt="phone-image"/>
                 <img class="phone-image initial-three" src="images/search-screen3.png" alt="phone-image"/>
                 <img class="phone-image text" src="images/phone-text.png" alt="phone-image"/>
         </div>
@@ -41,20 +39,20 @@
 
             <form class="search-bar">
                 <div class="condition">
-                    <label>Brand</label>
-                    <input type="text" id="brand" placeholder="Apple">
+                    <label for="brand">Brand</label>
+                    <input type="text" name="brand"  id="brand" placeholder="Apple">
                 </div>
                 <div class="condition">
-                    <label>Device</label>
-                    <input type="text" id="device" placeholder="iPhone">
+                    <label for="device">Device</label>
+                    <input type="text" name="device" id="device" placeholder="iPhone">
                 </div>
                 <div class="condition">
-                    <label>Model</label>
-                    <input type="text" id="model" placeholder="11 Max">
+                    <label for="model">Model</label>
+                    <input type="text" name="model" id="model" placeholder="11 Max">
                 </div>
                 <div class="bottom-bottons">
-                    <label >Max Results:</label>
-                    <input type="number" value="number" id="maxResults">
+                    <label for="MaxResults">Max Results:</label>
+                    <input type="number" value="number" name="MaxResults" id="maxResults">
                     <input type="submit" value="Submit" id="submit">
                 </div>
             </form>
