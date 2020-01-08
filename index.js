@@ -66,8 +66,6 @@ function phoneEffect(){
 
 
 //Vibrate the phone image when the user clicks on anything other than the phone image
-
-
 function manageWrongClicks(phone=true){
         if(phone === false){  
           $( '.red' ).css('display', 'block');
@@ -87,6 +85,7 @@ function manageWrongClicks(phone=true){
           $( '.red' ).fadeOut(300);
         }
 }
+
 //This function return youtube links or prints that Youtubr apikey has exceeded its qouta limit in the review video element in html
 function addVideos(deviceName, videoNum){
   let searchURL = youtubeURL; 
