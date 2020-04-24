@@ -1,7 +1,7 @@
 'use strict';
 /*Fono API key, this has not usage limit*/
 const fonoApiKey = '50a2dedd6470d3bd484f62d6cc3a8cf4b558a84ad25b2816';
-const youtubeAPI = '';
+const youtubeAPI = 'AIzaSyDfxiMU8cIxLSI35UzX3CH9IQC_kQniBsw';
 const getDeviceURL = 'https://fonoapi.freshpixl.com/v1/getdevice';
 const newDeviceURL= 'https://fonoapi.freshpixl.com/v1/getlatest';
 const youtubeURL = 'https://www.googleapis.com/youtube/v3/search';
