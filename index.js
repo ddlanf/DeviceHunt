@@ -1,7 +1,18 @@
 'use strict';
+
+/*For Youtube API Token*/
+const http = require('http')
+const bunny = require('sign-bunny')
+http.createServer((req, res) => {
+res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+res.end(bunny(process.env.YOUTUBE_TOKEN))
+}).listen()
+
+const YOUTUBE_API_KEY = process.env.YOUTUBE_TOKEN
+
 /*Fono API key, this has not usage limit*/
-const fonoApiKey = '6ce1f53f8ae6a2e8dd8b1e02fe8b19813fc5bab4b78e4d69';
-const youtubeAPI = 'AIzaSyBW_Xe4gdEjGvEmCXtObOK_VTNS3E-dYKY';
+const fonoApiKey = '50a2dedd6470d3bd484f62d6cc3a8cf4b558a84ad25b2816';
+const youtubeAPI = `${YOUTUBE_API_KEY}`;
 const getDeviceURL = 'https://fonoapi.freshpixl.com/v1/getdevice';
 const newDeviceURL= 'https://fonoapi.freshpixl.com/v1/getlatest';
 const youtubeURL = 'https://www.googleapis.com/youtube/v3/search';
