@@ -1,9 +1,10 @@
 {
     "name": "find-my-device",
     "dependencies": {
-    "sign-bunny": "1.0.0"
+        "http": "0.0.1-security",
+        "sign-bunny": "^1.0.0"
     },
     "scripts": {
-    "start": "node index"
+        "start": "node index"
     }
 }
