@@ -1,4 +1,4 @@
-# **FindMyDevice.com**
+# **Device Hunt**
 
 Website link: [https://ddlanf.github.io/FindMyDevice.com/](https://ddlanf.github.io/FindMyDevice.com/)
 
