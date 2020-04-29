@@ -1,6 +1,6 @@
 # **Device Hunt**
 
-Website link: [https://ddlanf.github.io/FindMyDevice.com/](https://ddlanf.github.io/FindMyDevice.com/)
+Website link: [https://ddlanf.github.io/DeviceHunt/](https://ddlanf.github.io/DeviceHunt/)
 
 ## Images
 ![Screenshot1](/images/Screenshot1.png)
